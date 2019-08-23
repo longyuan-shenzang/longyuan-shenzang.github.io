@@ -16,9 +16,14 @@
   
   
   
-    <meta name="description" content="龙渊丶神葬">
+    <meta name="description" content="洛谷习题 P1424 小鱼的航程（改进版）有一只小鱼，它平日每天游泳 250 公里，周末休息（实行双休日)，假设从周 x (1 ≤ x ≤ 7) 开始算起，过了 n (n ≤ 10^6)天以后，小鱼一共累计游泳了多少公里呢？
+输入格式输入两个整数x,n(表示从周x算起，经过n天）。
+输出格式输出一个整数，表示小鱼累计游泳了多少公里。
+输入输出样例输入3 10
+输出2000
+源代码如下：123...">
   
-  <title>标签 [ longyuan_shenzang ]</title>
+  <title>The fish is swimming [ longyuan_shenzang ]</title>
   
   
     <link rel="shortcut icon" href="/hollow.ico">
@@ -69,7 +74,7 @@
           </li>
         
           
-            <li class="active">
+            <li>
           
             <a href="/tags">Tags</a>
             
@@ -108,15 +113,46 @@
     <div id="content-inner">
       
       
-  <article id="page">
+  
+
+  <article id="post">
+    <h1>The fish is swimming</h1>
+    <p class="page-title-sub">
+      <span id="post-title-date">Created at 2019-08-23</span>
+      
+        <span id="post-title-updated">Updated at 2019-08-23</span>
+      
+      
+      
+      <span id="post-title-tags">
+      Tag
+      
+      
+        
+        
+        <a href="/tags/coding/">coding</a>
+      
+      </span>
+      
+    </p>
     
-    
-      <h1 class="center-title">标签</h1>
-      <div class="tag-cloud-tags">
-        <a href="/tags/coding/" style="font-size: 16px; color: #999">coding</a>
-      </div>
-    
+    <h2 id="洛谷习题-P1424-小鱼的航程（改进版）"><a href="#洛谷习题-P1424-小鱼的航程（改进版）" class="headerlink" title="洛谷习题 P1424 小鱼的航程（改进版）"></a>洛谷习题 P1424 小鱼的航程（改进版）</h2><p>有一只小鱼，它平日每天游泳 250 公里，周末休息（实行双休日)，假设从周 x (1 ≤ x ≤ 7) 开始算起，过了 n (n ≤ 10^6)天以后，小鱼一共累计游泳了多少公里呢？</p>
+<h3 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式"></a>输入格式<br></h3><p>输入两个整数x,n(表示从周x算起，经过n天）。</p>
+<h3 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式"></a>输出格式<br></h3><p>输出一个整数，表示小鱼累计游泳了多少公里。</p>
+<h3 id="输入输出样例"><a href="#输入输出样例" class="headerlink" title="输入输出样例"></a>输入输出样例<br></h3><h4 id="输入"><a href="#输入" class="headerlink" title="输入"></a>输入<br></h4><p>3 10<br></p>
+<h4 id="输出"><a href="#输出" class="headerlink" title="输出"></a>输出<br></h4><p>2000<br></p>
+<h4 id="源代码如下："><a href="#源代码如下：" class="headerlink" title="源代码如下："></a>源代码如下：</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;iostream&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">	int d, n, sum = 0;</span><br><span class="line">	cin &gt;&gt; d &gt;&gt; n;</span><br><span class="line">	for (int i = d - 1; i &lt; n + d - 1; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		if (!((i % 7) / 5))</span><br><span class="line">		&#123;</span><br><span class="line">			sum += 250;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	cout &lt;&lt; sum &lt;&lt; endl;</span><br><span class="line">	return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>通过这次的oj经历，让我对if判断结构中的判断语句有了深刻的理解和认识，通过各种简单的运算符和int类型的取整用法，实现更为复杂的判断，虽然只是个简单的小小的收获，但是，我觉得这种用法打开了我对coding、OJ的灵活运用，这种用法还可以用在多种方面。</p>
+
   </article>
+  <div class="random-toc-area">
+  <button class="btn-hide-toc btn-hide-toc-show" style="display: none" onclick="TOCToggle()">Show TOC</button>
+  <button class="btn-hide-toc btn-hide-toc-hide" onclick="TOCToggle()">Hide TOC</button>
+  <div class="random-toc">
+    <h2>Table of Content</h2>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#洛谷习题-P1424-小鱼的航程（改进版）"><span class="toc-text">洛谷习题 P1424 小鱼的航程（改进版）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#输入格式"><span class="toc-text">输入格式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#输出格式"><span class="toc-text">输出格式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#输入输出样例"><span class="toc-text">输入输出样例</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#输入"><span class="toc-text">输入</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#输出"><span class="toc-text">输出</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#源代码如下："><span class="toc-text">源代码如下：</span></a></li></ol></li></ol></li></ol>
+  </div>
+</div>
 
   
 <nav id="pagination">
